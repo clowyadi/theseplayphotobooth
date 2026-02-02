@@ -221,6 +221,194 @@
                 grid-template-columns: 1fr;
             }
         }
+        
+        /* Instagram Carousel Styles */
+        .instagram-carousel {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 60px 0;
+            text-align: center;
+            color: white;
+        }
+        
+        .instagram-carousel h2 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .instagram-carousel p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+        
+        .instagram-follow-btn {
+            background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            display: inline-block;
+            margin-top: 20px;
+        }
+        
+        .instagram-follow-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(225, 48, 108, 0.4);
+        }
+        
+        /* Photo Carousel Styles */
+        .photo-carousel {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 80px 0;
+            text-align: center;
+        }
+        
+        .photo-carousel h2 {
+            font-size: 2.5rem;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        
+        .carousel {
+            position: relative;
+            max-width: 800px;
+            margin: 40px auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        .carousel-inner {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+        
+        .carousel-item {
+            min-width: 100%;
+            padding: 60px 40px;
+            text-align: center;
+        }
+        
+        .photo-placeholder {
+            width: 300px;
+            height: 300px;
+            margin: 0 auto 30px;
+            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 4rem;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .photo-placeholder.wedding {
+            background: linear-gradient(45deg, #ff6b6b, #ffa8a8);
+        }
+        
+        .photo-placeholder.birthday {
+            background: linear-gradient(45deg, #4ecdc4, #a8e6cf);
+        }
+        
+        .photo-placeholder.corporate {
+            background: linear-gradient(45deg, #ffd93d, #ff6b6b);
+        }
+        
+        .photo-placeholder.graduation {
+            background: linear-gradient(45deg, #a8a8f0, #d8bfd8);
+        }
+        
+        .photo-placeholder p {
+            font-size: 1.5rem;
+            margin: 10px 0 5px;
+            font-weight: bold;
+        }
+        
+        .photo-placeholder small {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+        
+        .carousel-controls {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 20px;
+        }
+        
+        .carousel-btn {
+            background: rgba(255, 255, 255, 0.9);
+            border: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        .carousel-btn:hover {
+            background: white;
+            transform: scale(1.1);
+        }
+        
+        .carousel-indicators {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 30px;
+        }
+        
+        .indicator {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #ddd;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .indicator.active {
+            background: #764ba2;
+            transform: scale(1.2);
+        }
+        
+        .carousel-note {
+            margin-top: 30px;
+            font-size: 1.1rem;
+            color: #666;
+            font-style: italic;
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .photo-placeholder {
+                width: 250px;
+                height: 250px;
+                font-size: 3rem;
+            }
+            
+            .carousel-item {
+                padding: 40px 20px;
+            }
+            
+            .carousel-btn {
+                width: 40px;
+                height: 40px;
+                font-size: 1.2rem;
+            }
+        }
     </style>
 </head>
 <body>
@@ -232,6 +420,80 @@
             </a>
         </nav>
     </header>
+
+    <!-- Instagram Photo Carousel -->
+    <section class="instagram-carousel">
+        <div class="container">
+            <h2>📸 Follow Us on Instagram</h2>
+            <p>Check out our latest events and photo booth fun!</p>
+            <div class="carousel-container">
+                <div class="carousel-track">
+                    <!-- Instagram embeds will go here -->
+                    <div class="instagram-post">
+                        <blockquote class="instagram-media" 
+                            data-instgrm-permalink="https://www.instagram.com/theseplayphotobooth/" 
+                            data-instgrm-version="14"
+                            style="background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);">
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+            <a href="https://www.instagram.com/theseplayphotobooth/" target="_blank" class="instagram-follow-btn">
+                📱 Follow @theseplayphotobooth
+            </a>
+        </div>
+    </section>
+
+    <!-- Hero Section with Carousel Alternative -->
+    <section class="photo-carousel">
+        <div class="container">
+            <h2>🎉 Our Photo Booth in Action</h2>
+            <div class="carousel">
+                <div class="carousel-inner">
+                    <!-- Instagram Photo Placeholders -->
+                    <div class="carousel-item active">
+                        <div class="photo-placeholder wedding">
+                            <span>💍</span>
+                            <p>Wedding Events</p>
+                            <small>@theseplayphotobooth</small>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="photo-placeholder birthday">
+                            <span>🎂</span>
+                            <p>Birthday Parties</p>
+                            <small>@theseplayphotobooth</small>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="photo-placeholder corporate">
+                            <span>🎊</span>
+                            <p>Corporate Events</p>
+                            <small>@theseplayphotobooth</small>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="photo-placeholder graduation">
+                            <span>🎓</span>
+                            <p>Graduation Parties</p>
+                            <small>@theseplayphotobooth</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-controls">
+                    <button class="carousel-btn prev" onclick="moveCarousel(-1)">‹</button>
+                    <button class="carousel-btn next" onclick="moveCarousel(1)">›</button>
+                </div>
+                <div class="carousel-indicators">
+                    <span class="indicator active" onclick="goToSlide(0)"></span>
+                    <span class="indicator" onclick="goToSlide(1)"></span>
+                    <span class="indicator" onclick="goToSlide(2)"></span>
+                    <span class="indicator" onclick="goToSlide(3)"></span>
+                </div>
+            </div>
+            <p class="carousel-note">📸 Follow us on Instagram for more amazing moments!</p>
+        </div>
+    </section>
 
     <section class="hero">
         <div class="container">
@@ -326,6 +588,61 @@
             });
         });
 
+        // Carousel functionality
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.carousel-item');
+        const indicators = document.querySelectorAll('.indicator');
+        const track = document.querySelector('.carousel-inner');
+        
+        function showSlide(index) {
+            // Wrap around if necessary
+            if (index >= slides.length) currentSlide = 0;
+            if (index < 0) currentSlide = slides.length - 1;
+            
+            // Update carousel position
+            track.style.transform = `translateX(-${currentSlide * 100}%)`;
+            
+            // Update indicators
+            indicators.forEach((indicator, i) => {
+                indicator.classList.toggle('active', i === currentSlide);
+            });
+        }
+        
+        function moveCarousel(direction) {
+            currentSlide += direction;
+            showSlide(currentSlide);
+        }
+        
+        function goToSlide(index) {
+            currentSlide = index;
+            showSlide(currentSlide);
+        }
+        
+        // Auto-advance carousel every 5 seconds
+        setInterval(() => {
+            moveCarousel(1);
+        }, 5000);
+        
+        // Touch/swipe support for mobile
+        let touchStartX = 0;
+        let touchEndX = 0;
+        
+        const carousel = document.querySelector('.carousel');
+        
+        carousel.addEventListener('touchstart', e => {
+            touchStartX = e.changedTouches[0].screenX;
+        });
+        
+        carousel.addEventListener('touchend', e => {
+            touchEndX = e.changedTouches[0].screenX;
+            handleSwipe();
+        });
+        
+        function handleSwipe() {
+            if (touchEndX < touchStartX - 50) moveCarousel(1); // Swipe left
+            if (touchEndX > touchStartX + 50) moveCarousel(-1); // Swipe right
+        }
+
         // Add some interactive elements
         document.querySelectorAll('.package').forEach(pkg => {
             pkg.addEventListener('mouseenter', function() {
@@ -337,5 +654,8 @@
             });
         });
     </script>
+    
+    <!-- Instagram Embed Script -->
+    <script async src="//www.instagram.com/embed.js"></script>
 </body>
 </html>
